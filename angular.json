@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "ngRXJSDemo"
+  "defaultProject": "ngRXJSDemo",
+  "cli": {
+    "analytics": false
+  }
 }
