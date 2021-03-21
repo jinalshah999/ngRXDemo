@@ -11,6 +11,10 @@ export class ProductCategoryService {
   private productCategoriesUrl = 'api/productCategories';
   constructor(private http: HttpClient) {}
   //List All Category
+
+  getAllCat() {
+    return this.http.get(this.productCategoriesUrl);
+  }
   productCategories$ = this.http
     .get<ProductCategory[]>(this.productCategoriesUrl)
     .pipe(

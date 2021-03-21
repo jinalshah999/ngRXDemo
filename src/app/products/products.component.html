@@ -18,8 +18,8 @@
       </div>
     </div>
 
-    <!-- <div class="table-responsive">
-      <table class="table mb-0" *ngIf="vm.products">
+    <div class="table-responsive">
+      <table class="table mb-0" *ngIf="products$ | async as products">
         <thead>
           <tr>
             <th>Product</th>
@@ -29,7 +29,7 @@
             <th>In Stock</th>
           </tr>
         </thead>
-        <tbody *ngFor="let product of vm.products">
+        <tbody *ngFor="let product of products">
           <tr>
             <td>{{ product.productName }}</td>
             <td>{{ product.productCode }}</td>
@@ -39,11 +39,11 @@
           </tr>
         </tbody>
       </table>
-    </div> -->
+    </div>
 
   </div>
 </div>
 
-<!-- <div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">
+<div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">
   {{ errorMessage }}
-</div> -->
+</div>
